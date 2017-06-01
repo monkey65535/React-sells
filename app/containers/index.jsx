@@ -4,12 +4,24 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 class App extends React.Component {
     constructor(props, context) {
         super(props, context);
+
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+
+        this.state = {
+            initDone:false
+        }
+    }
+    componentDidMount(){
+        setTimeout(()=> {
+            this.setState({
+                initDone:true
+            })
+        },1000)
     }
     render() {
         return (
             <div>
-                {this.props.children}
+                {this.state.initDone ? this.props.children : <div>加载中···</div>}
             </div>
         )
     }
