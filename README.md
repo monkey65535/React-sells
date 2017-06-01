@@ -1,2 +1,3 @@
-# React-sells
-react-to-大众点评@慕课网
+# react-simple-o2o-demo
+
+首页，文档参见[这里](./docs/README.md)
