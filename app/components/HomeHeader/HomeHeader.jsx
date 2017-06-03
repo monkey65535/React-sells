@@ -14,7 +14,7 @@ class HomeHeader extends React.Component {
         return (
             <div id="home-header" className="clearfix">
                 <div className="fl home-header-left">
-                    <span>深圳</span>
+                    <span>{this.props.cityName}</span>
                     <i className="icon-angle-down"></i>
                 </div>
                 <div className="fr home-header-right">
@@ -32,5 +32,5 @@ class HomeHeader extends React.Component {
     }
 }
 
-// 使用 require.ensure 异步加载，还不支持 ES6 的 export export default HomeHeader
-module.exports = HomeHeader
+// 使用 require.ensure 异步加载，还不支持 ES6 的 
+export default HomeHeader
