@@ -7,6 +7,10 @@ import { connect } from 'react-redux';
 import HomeHeader from '../../components/HomeHeader/HomeHeader';
 // 分类轮播
 import Caregory from '../../components/Caregory/Caregory';
+// 广告分类
+import Ad from './subpage/Ad';
+// 分类列表
+import List from './subpage/List/List';
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -17,7 +21,10 @@ class Home extends React.Component {
         return (
             <div>
                 <HomeHeader cityName={this.props.userinfo.cityName}></HomeHeader>
-                <Caregory></Caregory>
+                <Caregory/>
+                <div style={{height:'15px'}}/>
+                <Ad/>
+                <List cityName={this.props.userinfo.cityName}/>
             </div>
         )
     }
