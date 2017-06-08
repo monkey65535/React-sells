@@ -1,15 +1,21 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
+import SearchHeader from '../../components/SearchHeader/SearchHeader';
+
 class Search extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+        const {params} = this.props;
         return (
             <div>
-                <h1>Search</h1>
+            
+                <SearchHeader keyWord={params.keyword}/>
+                <h1>Search {params.keyword}</h1>
+                
             </div>
         )
     }
