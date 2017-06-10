@@ -2,7 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import SearchHeader from '../../components/SearchHeader/SearchHeader';
-
+import List from './subpage/List';
 class Search extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -14,8 +14,7 @@ class Search extends React.Component {
             <div>
             
                 <SearchHeader keyWord={params.keyword}/>
-                <h1>Search {params.keyword}</h1>
-                
+                <List keyWord={params.keyWord} category={params.category}/>
             </div>
         )
     }
